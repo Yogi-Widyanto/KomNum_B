@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>Yogi Widyanto (180411100049)</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">Yogi Widyanto (180411100049)</a>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#error-in-numerical-computations" class="nav-link">Error in Numerical Computations</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#materi" class="nav-link">Materi</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#hasil-code" class="nav-link">Hasil Code</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="error-in-numerical-computations">Error in Numerical Computations</h1>
+<p>Nama         : Yogi Widyanto</p>
+<p>NIM         : 180411100049</p>
+<h2 id="materi">Materi</h2>
+<ol>
+<li>
+<h5 id="error-atau-galat">Error atau Galat</h5>
+</li>
+</ol>
+<blockquote>
+<p>Error / Galat merupakan perbedaan antara hasil penyelesaian suatu model matematik secara numeric dengan penyelesaian secara analitis. Kesalahan yang terjadi sangatlah penting, karena kesalahan dalam pemakaian algoritma pendekatan akan menyebabkan nilai kesalahan yang besar. Sehingga pendekatan metode numerik selalu membahas tingkat kesalahan dan tingkat kecepatan proses yang akan terjadi.</p>
+</blockquote>
+<ol>
+<li>
+<h5 id="round-of-error">Round of Error</h5>
+</li>
+</ol>
+<blockquote>
+<p>Perhitungan dengan metode numerik hampir selalu menggunakan bilangan riil. Masalah timbul bila komputasi numerik dikerjakan oleh mesin (dalam hal ini komputer) karena semua bilangan riil tidak dapat disajikan secara tepat di dalam komputer.  Sebagai contoh 1/6 = 0.166666666…</p>
+</blockquote>
+<ol>
+<li>
+<h5 id="truncation-error">Truncation Error</h5>
+</li>
+</ol>
+<blockquote>
+<p>Kesalahan pemotongan terjadi ketika suatu rumus komputasi disederhanakan dengan cara membuang suku yang berderajat tinggi.Metode numerik menggunakan pendekatan untuk menyelesaikan masalah. Kesalahan yang diperkenalkan oleh aproksimasi adalah kesalahan pemotongan. Rumus Truncation errors :</p>
+</blockquote>
+<p><img src="F:\Semester_4\KOMNUM\tugas_1\tugas1\tugas1\docs\trucation_error.png" alt="trucation_error" style="zoom:50%;" /></p>
+<ol>
+<li>
+<h5 id="deret-maclaurin">Deret Maclaurin</h5>
+</li>
+</ol>
+<blockquote>
+<p>Deret Maclaurin sangat berguna dalam komputasi numerik dalam menghitung nilai - nilai fungsi yang susah dihitung secara manual. Contoh sin(x), cos(x), e^x</p>
+</blockquote>
+<p>berikut algoritma mclaurin</p>
+<p><img src="F:\Semester_4\KOMNUM\tugas_1\tugas1\tugas1\docs\mclaurin.png" alt="mclaurin" style="zoom:70%;" /></p>
+<p>Deret MacLaurin biasa disebut sebagai deret Taylor baku, kerena deret maclaurin merupakan standar atau dasar yang berlaku dengan a=0. Atau persamaan Deret MacLaurin diatas dapat ditulis seperti berikut
+$$
+f(x) = \sum \limits_{i=0}^{n}  {f^i(0)x^i \over i!}
+$$</p>
+<h2 id="hasil-code">Hasil Code</h2>
+<h4 id="berikut-implementasi-deret-maclaurin">Berikut implementasi deret maclaurin</h4>
+<pre><code class="python">import math
+print(&quot;Soal  :  e^(3x)&quot;)
+print(&quot; &quot;)
+x = 1
+var = 1
+fa=1
+kondisi = True
+while kondisi==True :
+    f=((3**var)*(x**var))/math.factorial(var)
+    fnew=fa+f
+    test=fnew-fa
+    print(&quot;s&quot;,var,&quot;=&quot;,fa)
+    print(&quot;s&quot;,var+1 ,&quot;=&quot;,fnew)
+    print(&quot;selisih : &quot;,test)
+    print(&quot;--------------------------------------------------&quot;)
+    if test &lt;=0.0001 :
+        break
+    else :
+        fa+=f
+    var+=1
+print(&quot;&quot;)
+print ('total iterasi : ',var)
+print ('untuk x =',x)
+</code></pre>
+
+<p>hasil dari program diatas</p>
+<pre><code>Soal  :  e^(3x)
+
+s 1 = 1
+s 2 = 4.0
+selisih :  3.0
+--------------------------------------------------
+s 2 = 4.0
+s 3 = 8.5
+selisih :  4.5
+--------------------------------------------------
+s 3 = 8.5
+s 4 = 13.0
+selisih :  4.5
+--------------------------------------------------
+s 4 = 13.0
+s 5 = 16.375
+selisih :  3.375
+--------------------------------------------------
+s 5 = 16.375
+s 6 = 18.4
+selisih :  2.0249999999999986
+--------------------------------------------------
+s 6 = 18.4
+s 7 = 19.412499999999998
+selisih :  1.0124999999999993
+--------------------------------------------------
+s 7 = 19.412499999999998
+s 8 = 19.846428571428568
+selisih :  0.4339285714285701
+--------------------------------------------------
+s 8 = 19.846428571428568
+s 9 = 20.009151785714284
+selisih :  0.162723214285716
+--------------------------------------------------
+s 9 = 20.009151785714284
+s 10 = 20.063392857142855
+selisih :  0.05424107142857082
+--------------------------------------------------
+s 10 = 20.063392857142855
+s 11 = 20.079665178571425
+selisih :  0.016272321428569825
+--------------------------------------------------
+s 11 = 20.079665178571425
+s 12 = 20.08410308441558
+selisih :  0.004437905844156376
+--------------------------------------------------
+s 12 = 20.08410308441558
+s 13 = 20.08521256087662
+selisih :  0.001109476461039094
+--------------------------------------------------
+s 13 = 20.08521256087662
+s 14 = 20.08546859390609
+selisih :  0.0002560330294691937
+--------------------------------------------------
+s 14 = 20.08546859390609
+s 15 = 20.08552345812669
+selisih :  5.4864220601302804e-05
+--------------------------------------------------
+
+total iterasi :  14
+untuk x = 1
+</code></pre>
+
+<h5 id="penjelasan">Penjelasan</h5>
+<pre><code class="python">import math                     # import module math
+print(&quot;Soal  :  e^(3x)&quot;)
+print(&quot; &quot;)
+x = 1                           # nilai x
+var = 1                         # untuk jumlah iterasi dan juga pangkat
+fa=1                            # nilai f awal
+kondisi = True                  # kondisi awal untuk looping
+while kondisi==True :           
+    f=((3**var)*(x**var))/math.factorial(var)   # f=3^var*(x^var)/(var!) atau turunanya
+    fnew=fa+f                   # fnew untuk menjumlahkan fa dengan f selanjutnya
+    test=fnew-fa                # mengetahui selisih
+    print(&quot;s&quot;,var,&quot;=&quot;,fa)
+    print(&quot;s&quot;,var+1 ,&quot;=&quot;,fnew)
+    print(&quot;selisih : &quot;,test)
+    print(&quot;--------------------------------------------------&quot;)
+    if test &lt;=0.0001 :                          # jika selisih &lt;= 0.0001 maka break
+        break
+    else :
+        fa+=f                                   # jika tidak fawal diganti f  
+    var+=1                                      # var ditambah 1
+print(&quot;&quot;)
+print ('total iterasi : ',var)
+print ('untuk x =',x)
+</code></pre>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$$','$$']]}
+});
+</script>
+
+<p><script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.1
+Build Date UTC : 2020-03-04 13:42:34
+-->
