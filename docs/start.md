@@ -1,0 +1,16 @@
+## Identitas
+
+Yogi Widyanto
+
+180411100049
+
+Komputasi Numerik 4B
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$$','$$']]}
+});
+</script>
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>

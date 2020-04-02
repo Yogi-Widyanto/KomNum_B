@@ -1,0 +1,51 @@
+# Project information
+site_name: '(180411100049) Yogi Widyanto'
+site_description: 'Repository Untuk Tugas'
+site_author: 'Yogi Widyanto'
+site_url: 'https://yogi-widyanto.github.io/'
+
+# Repository
+repo_name: 'Yogi Widyanto'
+
+
+# Copyright
+copyright: 'Copyright &copy; 2020 Yogi'
+
+# Configuration
+theme:
+  name: 'material'
+  language: 'en'
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+
+# Customization
+extra:
+  manifest: 'manifest.webmanifest'
+  social:
+    - type: 'github'
+      link: 'https://yogi-widyanto.github.io/'
+    
+
+# Google Analytics
+google_analytics:
+  - 'UA-XXXXXXXX-X'
+  - 'auto'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+nav :
+  - Identitas : start.md
+  - Error in Numerical: index.md
+  - Mencari Akar Persamaan : tugas_2.md
+  - Metode Numeric untuk Persamaan Linier : pers_linier.md
+  - Metode Romberg : Metode Romberg.md
+  - Richardson Extrapolation: Richardson.md
